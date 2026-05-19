@@ -59,13 +59,13 @@ scripts/
 │   └── Fungi_occurance_upset_plot.R
 │
 ├── HPC_scripts/
-│   ├── GWAS/
-│   ├── TWAS/
-│   ├── coexpression/
-│   ├── read_processing/
-│   ├── tax_assignment/
-│   ├── orthofinder/
-│   └── heritability/
+    ├── GWAS/
+    ├── TWAS/
+    ├── coexpression/
+    ├── read_processing/
+    ├── tax_assignment/
+    ├── orthofinder/
+    └── heritability/
 ```
 
 
@@ -88,20 +88,6 @@ Core analyses include:
 
 ---
 
-# Supplementary Outputs
-
-## Supplementary Datasets
-- **S1–S3:** Fungal relative abundance matrices (maize, sorghum, soybean)
-- **S4:** Orthogroup assignments for TWAS-significant genes
-
-## Supplementary Tables
-- **S1–S3:** Taxon counts, GWAS parameters, heritability estimates  
-- **S4–S6:** TWAS, GWAS, and eQTL results  
-- **S7–S10:** Hotspot-specific GWAS/eQTL summaries and gene associations  
-
-(Full details provided in manuscript supplement.)
-
----
 
 # Software
 
