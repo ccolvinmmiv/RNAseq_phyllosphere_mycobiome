@@ -1,0 +1,8 @@
+workshop_scripts_abandoned/
+*.csv
+*.tsv
+*.rds
+*.RData
+*.log
+*.out
+*.tmp
