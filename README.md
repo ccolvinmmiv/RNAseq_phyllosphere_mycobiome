@@ -1,20 +1,36 @@
 # RNAseq_phyllosphere_mycobiome
 
-This repository contains scripts and analytical workflows used to characterize host genetic control of leaf-associated fungal communities across maize (*Zea mays*), sorghum (*Sorghum bicolor*), and soybean (*Glycine max*). The project integrates RNA-seq–derived fungal abundance profiles with host genomic, transcriptomic, GWAS, TWAS, eQTL, coexpression, and gene regulatory network analyses.
+This repository contains scripts and analytical workflows used to characterize host genetic control of leaf-associated fungal communities across maize (*Zea mays*), sorghum (*Sorghum bicolor*), and soybean (*Glycine max*). The project integrates RNA-seq–derived fungal abundance profiles with host genomic and transcriptomic data to perform GWAS, TWAS, eQTL mapping, coexpression analysis, and gene regulatory network inference.
 
 ---
 
-# Overview
+# Data Sources
 
-We analyze publicly available field-collected RNA-seq datasets to:
+RNA-seq datasets were obtained from previously published field-grown diversity panels:
 
-- Profile fungal communities across host genotypes and environments
-- Estimate narrow-sense heritability of fungal abundance traits
-- Perform genome-wide association studies (GWAS)
-- Conduct transcriptome-wide association studies (TWAS)
-- Map expression quantitative trait loci (eQTLs)
-- Identify coexpression modules and gene regulatory networks
-- Infer cross-species orthologous fungal-associated genes
+| Species | Panel | Location | Samples | Reference |
+|----------|------|----------|---------|----------|
+| Maize (*Zea mays*) | WiDiv | Lincoln, NE, USA | ~750 | Torres-Rodríguez et al., 2024, *The Plant Journal* |
+| Sorghum (*Sorghum bicolor*) | SAP + SDP | Lincoln, NE, USA | ~822 | Mangal et al., 2025, *The Plant Journal* |
+| Soybean (*Glycine max*) | Diversity panel | Sanya, China | ~622 | Li et al., 2024, *Plant Communications* |
+
+Raw sequencing data:
+- ENA: PRJEB67964 (maize), PRJEB83049 (sorghum)  
+- GSA: CRA009979 (soybean)
+
+---
+
+## Genotype and Reference Data
+
+Genotype data were available for maize and sorghum only:
+
+- Maize genotypes: https://doi.org/10.5061/dryad.bnzs7h4f1  
+- Sorghum genotypes: https://doi.org/10.6084/m9.figshare.27936195  
+
+Reference taxonomy database:
+- Kraken2 prebuilt database: https://benlangmead.github.io/aws-indexes/k2  
+
+Soybean was excluded from GWAS, TWAS, and heritability analyses due to lack of genotype data.
 
 ---
 
@@ -52,103 +68,71 @@ scripts/
 │   └── heritability/
 ```
 
----
-
-# Data Sources
-
-We analyzed RNA-seq datasets from three previously published field-grown plant diversity panels:
-
-| Species | Panel | Location | Samples | Primary publication |
-|----------|------|----------|---------|----------------------|
-| Maize (*Zea mays*) | WiDiv panel | Lincoln, NE, USA | ~750 | Torres-Rodríguez et al., 2024, *The Plant Journal*  |
-| Sorghum (*Sorghum bicolor*) | SAP + SDP panels | Lincoln, NE, USA | ~822 | Mangal et al., 2025, *The Plant Journal* |
-| Soybean (*Glycine max*) | Diversity panel | Sanya, China | ~622 | Li et al., 2024, *Plant Communications* |
-
-Raw sequencing data are publicly available from:
-
-- ENA: PRJEB83049 (sorghum), PRJEB67964 (maize)  
-- GSA: CRA009979 (soybean)
-
-Genotype data were available for maize and sorghum only; soybean was excluded from GWAS, eQTL, and heritability analyses.
-
----
-## Genotype and reference resources
-
-For maize and sorghum, genetic marker data were obtained from publicly available repositories:
-
-- Maize: Dryad dataset (https://doi.org/10.5061/dryad.bnzs7h4f1)  
-- Sorghum: Figshare dataset (https://doi.org/10.6084/m9.figshare.27936195)
-
-The prebuilt Kraken2 classifier database used for taxonomic assignment is available at:
-
-- https://benlangmead.github.io/aws-indexes/k2
-
- 
-# Supplementary Materials
-
-## Supplementary Figures
-
-**S1.** Distribution of fungal read counts per sample across datasets.  
-**S2.** Overlap of fungal taxa detected across maize, sorghum, and soybean across taxonomic levels.  
-**S3.** Top ≤10 KEGG terms enriched among TWAS-significant genes (maize, sorghum, soybean).  
-**S4.** Top ≤10 GO Cellular Component terms enriched among TWAS-significant genes.  
-**S5.** Top ≤10 GO Biological Process terms enriched among TWAS-significant genes.  
-**S6.** Top ≤10 GO Molecular Function terms enriched among TWAS-significant genes.  
-**S7.** Genome-wide distribution of GWAS and eQTL peaks across maize and sorghum genomes.
-
----
-
-## Supplementary Tables
-
-**S1.** Number of fungal taxa retained per dataset across taxonomic levels following filtering thresholds.  
-**S2.** Number of genetic markers, effective markers (Meff), and significance thresholds used in GWAS.  
-**S3.** Narrow-sense heritability (h²) estimates for fungal abundance traits in maize and sorghum.  
-**S4.** Significant TWAS associations for fungal abundance traits across maize, sorghum, and soybean.  
-**S5.** Significant GWAS peaks associated with fungal abundance traits in maize and sorghum.  
-**S6.** eQTL peaks for TWAS-significant genes in maize and sorghum.  
-**S7.** GWAS and eQTL peaks in sorghum chromosome 4 hotspot (Chr04: 57.99–59.96 Mb).  
-**S8.** Fungal taxa associated with expression of Sobic.004G214900.  
-**S9.** GWAS and eQTL peaks in sorghum chromosome 9 hotspot (Chr09: 61.62–63.28 Mb).  
-**S10.** GWAS and eQTL peaks in sorghum chromosome 10 eQTL hotspot (Chr10: 58.88–60.74 Mb).
-
----
-
-## Supplementary Datasets
-
-**S1.** Maize fungal relative abundance matrix. Includes all samples passing the 2500 fungal-read threshold prior to winsorization and genotype-level collapsing for GWAS/TWAS analyses.  
-
-**S2.** Sorghum fungal relative abundance matrix. Includes all samples passing the 2500 fungal-read threshold prior to winsorization and genotype-level collapsing for GWAS/TWAS analyses.  
-
-**S3.** Soybean fungal relative abundance matrix. Includes all samples passing the 2500 fungal-read threshold prior to winsorization.  
-
-**S4.** Orthogroup assignments for TWAS-significant genes across maize, sorghum, and soybean.
 
 ---
 
 # Analysis Overview
 
-Key analytical components include:
+Core analyses include:
 
-- RNA-seq processing (Trimmomatic)
-- Taxonomic classification (Kraken2 + Bracken)
-- Heritability estimation (LDAK REML)
-- GWAS (rMVP MLM framework)
-- TWAS (GAPIT cMLM framework)
-- eQTL mapping (GWAS framework applied to expression traits)
-- Coexpression analysis (WGCNA)
+- RNA-seq read processing and taxonomic classification (Trimmomatic, Kraken2, Bracken)
+- Fungal abundance quantification and filtering
+- Narrow-sense heritability estimation (LDAK)
+- Genome-wide association studies (rMVP)
+- Transcriptome-wide association studies (GAPIT)
+- eQTL mapping
+- Coexpression network analysis (WGCNA)
 - Gene regulatory network inference (GENIE3)
 - Orthology inference (OrthoFinder)
+- Functional enrichment (gProfiler2)
+
+---
+
+# Supplementary Outputs
+
+## Supplementary Datasets
+- **S1–S3:** Fungal relative abundance matrices (maize, sorghum, soybean)
+- **S4:** Orthogroup assignments for TWAS-significant genes
+
+## Supplementary Tables
+- **S1–S3:** Taxon counts, GWAS parameters, heritability estimates  
+- **S4–S6:** TWAS, GWAS, and eQTL results  
+- **S7–S10:** Hotspot-specific GWAS/eQTL summaries and gene associations  
+
+(Full details provided in manuscript supplement.)
+
+---
+
+# Software
+
+Key tools used:
+
+- Trimmomatic  
+- Kraken2 + Bracken  
+- Kallisto  
+- rMVP  
+- GAPIT  
+- LDAK  
+- WGCNA  
+- GENIE3  
+- OrthoFinder  
+- gProfiler2  
+- VCFtools  
+
+R (≥4.2) and Python (≥3.8) were used for custom analyses.
 
 ---
 
 # License
 
-Recommended: MIT License (for reusable pipelines and analysis scripts)
+MIT License recommended for reusable analysis pipelines.
 
 ---
 
 # Notes
 
-- Intermediate files are not included unless required for reproducibility
+- Intermediate files are excluded unless required for reproducibility
+- Representative scripts are provided for each major analytical step
+- Species-specific workflows share identical core pipelines
 - Representative scripts are provided for each major analysis stage
 - Dataset-specific redundancies were removed where workflows are identical across species
