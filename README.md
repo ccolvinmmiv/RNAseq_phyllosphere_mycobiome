@@ -83,7 +83,7 @@ The prebuilt Kraken2 classifier database used for taxonomic assignment is availa
 
 - https://benlangmead.github.io/aws-indexes/k2
 
-- 
+ 
 # Supplementary Materials
 
 ## Supplementary Figures
