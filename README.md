@@ -58,18 +58,18 @@ scripts/
 
 We analyzed RNA-seq datasets from three previously published field-grown plant diversity panels:
 
-| Species | Panel | Location | Samples |
-|----------|------|----------|---------|
-| Maize (*Zea mays*) | WiDiv panel | Lincoln, NE, USA | ~750 |
-| Sorghum (*Sorghum bicolor*) | SAP + SDP panels | Lincoln, NE, USA | ~822 |
-| Soybean (*Glycine max*) | Diversity panel | Sanya, China | ~622 |
+| Species | Panel | Location | Samples | Primary publication |
+|----------|------|----------|---------|----------------------|
+| Maize (*Zea mays*) | WiDiv panel | Lincoln, NE, USA | ~750 | Torres-Rodríguez et al., 2024, *The Plant Journal*  |
+| Sorghum (*Sorghum bicolor*) | SAP + SDP panels | Lincoln, NE, USA | ~822 | Mangal et al., 2025, *The Plant Journal* |
+| Soybean (*Glycine max*) | Diversity panel | Sanya, China | ~622 | Li et al., 2024, *Plant Communications* |
 
-Raw data are publicly available from:
+Raw sequencing data are publicly available from:
 
-- ENA: PRJEB83049 (sorghum), PRJEB67964 (maize)
+- ENA: PRJEB83049 (sorghum), PRJEB67964 (maize)  
 - GSA: CRA009979 (soybean)
 
-Genotype data were available for maize and sorghum only; soybean was excluded from GWAS, TWAS, and heritability analyses.
+Genotype data were available for maize and sorghum only; soybean was excluded from GWAS, eQTL, and heritability analyses.
 
 ---
 
