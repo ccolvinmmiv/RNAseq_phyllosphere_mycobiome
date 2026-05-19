@@ -30,7 +30,7 @@ Genotype data were available for maize and sorghum only:
 Reference taxonomy database:
 - Kraken2 prebuilt database: https://benlangmead.github.io/aws-indexes/k2  
 
-Soybean was excluded from GWAS, TWAS, and heritability analyses due to lack of genotype data.
+Soybean was excluded from GWAS, eQTL, and heritability analyses due to lack of genotype data.
 
 ---
 
