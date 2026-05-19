@@ -105,7 +105,7 @@ Key tools used:
 - gProfiler2  
 - VCFtools  
 
-R (≥4.2) and Python (≥3.8) were used for custom analyses.
+R (≥4.5) and Python (≥3.8) were used for custom analyses.
 
 ---
 
