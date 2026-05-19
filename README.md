@@ -72,7 +72,18 @@ Raw sequencing data are publicly available from:
 Genotype data were available for maize and sorghum only; soybean was excluded from GWAS, eQTL, and heritability analyses.
 
 ---
+## Genotype and reference resources
 
+For maize and sorghum, genetic marker data were obtained from publicly available repositories:
+
+- Maize: Dryad dataset (https://doi.org/10.5061/dryad.bnzs7h4f1)  
+- Sorghum: Figshare dataset (https://doi.org/10.6084/m9.figshare.27936195)
+
+The prebuilt Kraken2 classifier database used for taxonomic assignment is available at:
+
+- https://benlangmead.github.io/aws-indexes/k2
+
+- 
 # Supplementary Materials
 
 ## Supplementary Figures
