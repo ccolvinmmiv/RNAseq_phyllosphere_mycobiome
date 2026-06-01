@@ -2,6 +2,8 @@
 
 This repository contains scripts and analytical workflows used to characterize host genetic control of leaf-associated fungal communities across maize (*Zea mays*), sorghum (*Sorghum bicolor*), and soybean (*Glycine max*). The project integrates RNA-seq–derived fungal abundance profiles with host genomic and transcriptomic data to perform GWAS, TWAS, eQTL mapping, coexpression analysis, and gene regulatory network inference.
 
+These scripts represent the original analysis code used in the study. File paths are system-specific and will need to be updated by users to match their local environment. All input datasets required to reproduce the analyses are available in the supplementary materials and public repositories referenced in the manuscript.
+
 ---
 
 # Data Sources
@@ -30,7 +32,7 @@ Genotype data were available for maize and sorghum only:
 Reference taxonomy database:
 - Kraken2 prebuilt database: https://benlangmead.github.io/aws-indexes/k2  
 
-Soybean was excluded from GWAS, eQTL, and heritability analyses due to lack of genotype data.
+Soybean was not included in GWAS, eQTL, and heritability analyses due to lack of available genotype data.
 
 ---
 
@@ -117,8 +119,6 @@ MIT License recommended for reusable analysis pipelines.
 
 # Notes
 
-- Intermediate files are excluded unless required for reproducibility
-- Representative scripts are provided for each major analytical step
-- Species-specific workflows share identical core pipelines
-- Representative scripts are provided for each major analysis stage
-- Dataset-specific redundancies were removed where workflows are identical across species
+- All input data required for reproduction are either publicly available or included in supplementary datasets.
+- Intermediate files are not included unless necessary for reproducibility of downstream analyses.
+- Species-specific workflows share a common analytical framework implemented across scripts.
