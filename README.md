@@ -5,7 +5,13 @@ This repository contains scripts and analytical workflows used to characterize h
 These scripts represent the original analysis code used in the study. File paths are system-specific and will need to be updated by users to match their local environment. All input datasets required to reproduce the analyses are available in the supplementary materials and public repositories referenced in the manuscript.
 
 ---
+## Citation
 
+If you use this code, please cite:
+
+Colvin C, Chopra S. Population-scale transcriptomics reveals host genetic control of phyllosphere fungal communities. bioRxiv. 2026. https://doi.org/10.64898/2026.05.21.727028
+
+---
 # Data Sources
 
 RNA-seq datasets were obtained from previously published field-grown diversity panels:
