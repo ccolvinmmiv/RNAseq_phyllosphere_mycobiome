@@ -1,4 +1,4 @@
-# RNAseq_phyllosphere_mycobiome
+# RNAseq phyllosphere mycobiome
 
 This repository contains scripts and analytical workflows used to characterize host genetic control of leaf-associated fungal communities across maize (*Zea mays*), sorghum (*Sorghum bicolor*), and soybean (*Glycine max*). The project integrates RNA-seq–derived fungal abundance profiles with host genomic and transcriptomic data to perform GWAS, TWAS, eQTL mapping, coexpression analysis, and gene regulatory network inference.
 
