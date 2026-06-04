@@ -21,7 +21,7 @@ conda activate GWAS
  #/storage/work/cfc5873/Mycobiome/scripts/ne_2020_maize/GWAS/genotype_files/Maize_WiDiv_GeneticMarkers_filtered_688_genos.recode.HomoMAF.vcf \
  #0.05 0.1
 
-#Maize Marker set very high density (~10 million SNPs) after filtering above, so pruning down to SNP every 3 kb
+#Maize Marker set very high density (~10 million SNPs) after filtering above, so pruning down to SNP every 1 kb
 #gzip /storage/work/cfc5873/Mycobiome/scripts/ne_2020_maize/GWAS/genotype_files/Maize_WiDiv_GeneticMarkers_filtered_688_genos.recode.HomoMAF.vcf
 
 vcftools \
