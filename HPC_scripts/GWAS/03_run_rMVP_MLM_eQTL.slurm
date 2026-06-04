@@ -46,6 +46,5 @@ R CMD BATCH -${p} -${g} -${total_markers} -${effective_markers} MLMGWAS_trycatch
 cp *_signals.csv /scratch/cfc5873/mycobiome_eQTL_outputs/maize/significant_SNPs
 cp *.MLM.csv /scratch/cfc5873/mycobiome_eQTL_outputs/maize/all_SNPs
 
-#cp *.Rout /storage/work/cfc5873/Ufo1_eQTL/logs/GWAS/Ufo1_eQTL_fast_test
-#cp *failed_phenotypes.txt /work/schnablelab/ccolvin4/fungal_metatrans_GWAS/signals/failed_phenos/
+
 
